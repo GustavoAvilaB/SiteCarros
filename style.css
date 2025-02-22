@@ -84,7 +84,6 @@ header{
                     filter: blur(50px);
                 }
             }
-
             & .content{
                 position: absolute; 
                 right: 80px;
