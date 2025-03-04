@@ -1,19 +1,21 @@
 @charset "UTF-8";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background-color: black;
     color: white;
     font-size: 16px;
     overflow: hidden;
 }
-header{
+
+header {
     position: fixed;
     width: 80vw;
     left: 50%;
@@ -23,32 +25,36 @@ header{
     gap: 10%;
     align-items: center;
     z-index: 2;
-    & img{
+
+    & img {
         width: 250px;
     }
- & nav{
-       & ul{
-        display: grid;
-        grid-template-columns: repeat(3, 300px);
-       }
-       & a{
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-        /* font-weight: bold; */
-        text-align: center;
-        padding: 10px;
-        border-radius: 10px;
-        transition: 0.5s;
-        &:hover{
-            background-color: #791fd3;
+
+    & nav {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
         }
-       }
-      }
-      
-  }
-  
- section{
+
+        & a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            /* font-weight: bold; */
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: #791fd3;
+            }
+        }
+    }
+
+}
+
+section {
     background-image: radial-gradient(#7f3d9e, #6d00d9);
     height: 100vh;
     width: 100%;
@@ -58,90 +64,112 @@ header{
     justify-content: space-evenly;
     flex-wrap: wrap;
     --calculation: 1;
-    
-        & .cars{
+
+    & .cars {
         background-image: radial-gradient(#db55db, #8000ff);
         width: 20vw;
         height: 50vh;
         z-index: 1;
         background-color: white;
+        border: 1px solid rgb(110, 0, 201);
         color: black;
         border-radius: 10px;
-        padding: 10px;
         display: grid;
         gap: 10px;
         transition: 0.9s;
         box-shadow: 0px -1px 20px 2px #0404040d;
-          
-    }
-    
 
-        button{
-            background-color: #791fd3;
-            font-size: large;
-            margin: auto;
-            height: 60px;
-            padding: 10px;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.5s;
-            &:hover{
-                background-color: white;
-                color: #791fd3;
-            }
-        }
-
-        & .car1{
-            width: 100%;
-            padding-top: 10px;
-            z-index: 2; 
-                 
-            }
-        
-        & .car2{
-            width: 100%;
-            padding-top: 10px;
-            z-index: 2;     
-                 
-            }
-            & .car3{
-                width: 100%;
-                padding-top: 10px;
-                z-index: 2;
-                }
-        p{
-            text-align: center;
-            width: 340px;
-            margin: auto;
-            text-align: justify;
-        }
-        #car1{
-            &:hover{
-                transform: scale(1.1);
-                    color: #d3d3d3;
-                    background-image: linear-gradient( #a9a4af, #4b4b4b);
-                    box-shadow: 0px -1px 20px 2px #3f3f3f;
-        
-            }
-        }
-        #car2{
-            &:hover{
-                transform: scale(1.1);
-                    color: #d3d3d3;
-                    background-image: linear-gradient( #db0909, #5f0000);
-                    box-shadow: 0px -1px 20px 2px #690707a1;       
-            }
-        }
-        #car3{
-            &:hover{
-                transform: scale(1.1);
-                    color: #d3d3d3;
-                    background-image: linear-gradient( #d9dd00, #525301);
-                    box-shadow: 0px -1px 20px 2px #898b09; 
-        
-            }
-        }
-        
     }
+
+
+    button {
+        background-color: #791fd3;
+        font-size: large;
+        margin: auto;
+        height: 60px;
+        padding: 10px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: white;
+            color: #791fd3;
+        }
+    }
+
+    & .car1 {
+        width: 100%;
+        padding: 10px;
+        padding-top: 10px;
+        z-index: 2;
+
+    }
+
+    & .car2 {
+        width: 100%;
+        padding: 10px;
+        padding-top: 10px;
+        z-index: 2;
+
+    }
+
+    & .car3 {
+        width: 100%;
+        padding: 10px;
+        padding-top: 10px;
+        z-index: 2;
+    }
+
+    p {
+        text-align: center;
+        width: 340px;
+        margin: auto;
+        text-align: justify;
+    }
+
+    #car1 {
+        &:hover {
+            transform: scale(1.1);
+            color: #d3d3d3;
+            background-image: linear-gradient(#a9a4af, #4b4b4b);
+            box-shadow: 0px -1px 20px 2px #3f3f3f;
+            transition: 1s;
+
+
+        }
+    }
+
+    #car2 {
+        &:hover {
+            transform: scale(1.1);
+            color: #d3d3d3;
+            background-image: linear-gradient(#db0909, #5f0000);
+            box-shadow: 0px -1px 20px 2px #690707a1;
+            transition: 1s;
+
+        }
+    }
+
+    #car3 {
+        &:hover {
+            transform: scale(1.1);
+            color: #d3d3d3;
+            background-image: linear-gradient(#d9dd00, #525301);
+            box-shadow: 0px -1px 20px 2px #898b09;
+            transition: 1s;
+
+
+        }
+    }
+    hr{
+        width: 100%;
+        margin: auto;
+        padding: 0px 10px;
+        border: 1px solid black;
+        height: 0px;
+    }
+
+}
