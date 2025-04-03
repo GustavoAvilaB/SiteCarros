@@ -35,7 +35,7 @@
             <p><strong>Informações:</strong> Único dono.</p>
             <p><strong>Descrição</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente et
                 nisi voluptatibus dolorum voluptates veritati!</p>
-            <button>Encaminhar pedido!</button>
+            <button onclick="pedido()">Encaminhar pedido!</button>
         </div>
         <div id="car2" class="cars">
             <img src="img/ferrari1.png" alt="ferrari" class="car2">
@@ -44,7 +44,7 @@
             <p><strong>Informações:</strong> Conversível.</p>
             <p><strong>Descrição</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente et
                 nisi voluptatibus dolorum voluptates veritati!</p>
-            <button>Encaminhar pedido!</button>
+            <button onclick="pedido()">Encaminhar pedido!</button>
         </div>
         <div class="cars" id="car3">
             <img src="img/lamborghini.png" alt="lamborghini" class="car3">
@@ -53,6 +53,12 @@
             <p><strong>Informações:</strong> 2015.</p>
             <p><strong>Descrição</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente et
                 nisi voluptatibus dolorum voluptates veritati!</p>
-            <button>Encaminhar pedido!</button>
-    </section>
-</body>
+            <button onclick="pedido()">Encaminhar pedido!</button>
+        </section>
+        <script>//Função para confirmar o pedido do cliente e encaminhar o pedido para o vendedor.
+            function pedido() {
+                let a = window.confirm("Deseja realmente encaminhar o pedido?");
+                a ? window.alert("Pedido encaminhado com sucesso!") : window.alert("Pedido cancelado!");
+            }
+        </script>
+</body> 
