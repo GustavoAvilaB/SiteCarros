@@ -12,7 +12,10 @@ body {
     background-color: black;
     color: white;
     font-size: 16px;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
+    width: 100%;
 }
 
 header {
@@ -29,14 +32,14 @@ header {
     & img {
         width: 250px;
     }
+     & nav{
 
-    & nav {
-        & ul {
-            display: grid;
-            grid-template-columns: repeat(3, 300px);
-        }
+        & ul{
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+       }
 
-        & a {
+        & a{
             text-decoration: none;
             color: white;
             font-size: 20px;
@@ -45,37 +48,32 @@ header {
             padding: 10px;
             border-radius: 10px;
             transition: 0.5s;
-
-            &:hover {
+            &:hover{
                 background-color: #791fd3;
             }
         }
+      }
     }
 
-}
-
 section {
-    background-image: radial-gradient(#7f3d9e, #6d00d9);
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    position: relative;
     display: flex;
     align-content: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    --calculation: 1;
 
     & .cars {
+        transform: translateY(10px);
         background-image: radial-gradient(#db55db, #8000ff);
-        width: 20vw;
+        width: 100%;
+        max-width: 360px;
         height: 50vh;
-        z-index: 1;
         background-color: white;
         border: 1px solid rgb(110, 0, 201);
         color: black;
         padding: 20px;
         border-radius: 10px;
-        display: grid;
         gap: 10px;
         transition: 0.9s;
         box-shadow: 0px -1px 20px 2px #0404040d;
@@ -94,41 +92,36 @@ section {
         border-radius: 10px;
         cursor: pointer;
         transition: 0.5s;
-
+        display: flex;
+        transform: translateY(50px);
         &:hover {
             background-color: white;
             color: #791fd3;
         }
     }
 
-    & .car1 {
+    & .car1, .car2, .car3{
         width: 100%;
         padding: 10px;
         padding-top: 10px;
         z-index: 2;
 
-    }
-
-    & .car2 {
-        width: 100%;
-        padding: 10px;
-        padding-top: 10px;
-        z-index: 2;
-
-    }
-
-    & .car3 {
-        width: 100%;
-        padding: 10px;
-        padding-top: 10px;
-        z-index: 2;
     }
 
     p {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         text-align: center;
-        width: 340px;
+        justify-self: end;
         margin: auto;
-        text-align: justify;
+        flex-wrap: wrap;
+        max-width: 40rem;
+        height: auto;
+        min-width: 14rem;
+        font-size: 13px;
+        line-height: 2;
+        font-weight: 600;
     }
 
     #car1 {
@@ -169,8 +162,117 @@ section {
         width: 100%;
         margin: auto;
         padding: 0px 10px;
+        margin-bottom: 20px;
         border: 1px solid black;
         height: 0px;
     }
+
+}
+footer{
+display: none;
+}
+
+.cars img{
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+@media (max-width: 720px){
+
+    body{
+        overflow: scroll;
+    }
+    header{
+        display: none;
+    }
+    section{
+        transform:scale(0.8);
+        gap: 20px;
+        max-width: 100vw;
+        min-height: 100vh;
+        margin: auto;
+    }
+    section .cars{
+    width: 70vw;
+    grid-template-columns: 1fr;
+    }
+    div.cars button {
+        transform: translateY(0);
+        width: 140px;
+        height: auto;
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    div.cars{
+        width: 100vw;
+        height: auto;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+        div.cars p{
+        width: 16rem;
+        height: auto;
+        max-width: 300px;
+        font-size: 13px;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+    div.cars img{
+        width: 100%;
+    }
+    ul li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+nav{
+    width: 60%;
+}
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+    .footer-navigation{
+        display: block;
+    }
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+footer{
+    height: 2px;
+    margin-top: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    margin: 0px;
+}
+footer div{
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 0.68rem;
+    background-color: #000000;
+    margin: 0px;
+}
+
+footer div a{
+    color: aliceblue;
+}
 
 }

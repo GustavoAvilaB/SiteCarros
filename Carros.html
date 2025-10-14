@@ -29,7 +29,10 @@
     </header>
     <section class="base">
         <div id="car1" class="cars">
-            <img src="img/porsche.png" alt="porsche" class="car1">
+            <picture>
+                <source media="(max-idth:500px)" srcset="img/porsche-200pq.png">
+                <img src="img/porsche.png" alt="porsche" class="car1">
+            </picture>
             <hr>
             <p><strong>Modelo:</strong> 991 Turbo</p>
             <p><strong>Informações:</strong> Único dono.</p>
@@ -38,7 +41,10 @@
             <button onclick="pedido()">Encaminhar pedido!</button>
         </div>
         <div id="car2" class="cars">
-            <img src="img/ferrari1.png" alt="ferrari" class="car2">
+            <picture>
+                <source media="(max-width:500px)" srcset="img/ferrari1-200pq.png">
+                <img src="img/ferrari1.png" alt="ferrari" class="car2">
+            </picture>
             <hr>
             <p><strong>Modelo:</strong> Ferrari</p>
             <p><strong>Informações:</strong> Conversível.</p>
@@ -47,7 +53,10 @@
             <button onclick="pedido()">Encaminhar pedido!</button>
         </div>
         <div class="cars" id="car3">
-            <img src="img/lamborghini.png" alt="lamborghini" class="car3">
+                <picture>
+                <source media="(max-width:500px)" srcset="img/lamborghini-200pq.png">
+                <img src="img/lamborghini.png" alt="lamborghini" class="car3">
+            </picture>
             <hr>
             <p><strong>Modelo:</strong> Lamborghini</p>
             <p><strong>Informações:</strong> 2015.</p>
@@ -55,6 +64,21 @@
                 nisi voluptatibus dolorum voluptates veritati!</p>
             <button onclick="pedido()">Encaminhar pedido!</button>
         </section>
+        <footer>
+
+        <nav class="footer-navigation">
+               <ul class="footer-list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Carros.html">Carros</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+               </ul>
+
+        </nav> 
+            <div>
+                <span>&copy;Todos os direitos reservados</span>
+                <span>Desenvido por: <a href="https://github.com/GustavoAvilaB">Gustavo Bandeira</a></span>
+            </div>
+    </footer>
         <script>//Função para confirmar o pedido do cliente e encaminhar o pedido para o vendedor.
             function pedido() {
                 let a = window.confirm("Deseja realmente encaminhar o pedido?");
