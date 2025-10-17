@@ -53,7 +53,7 @@ header{
     position: relative;
 
     & .list{
-        width: 70vw;
+        width: 65vw;
         height: 100%;
         position: relative;
         margin: auto;
@@ -103,13 +103,14 @@ header{
 
                 & h2{
                     font-size: 8em;
-                    line-height: 1em;
+                    line-height: 0.7em;
                     font-family: "League Gothic", serif;
                 }
 
                 & .description{
                     color: #d9d9d9;
-                    font-size: 12px;
+                    margin-top: 70px;
+                    font-size: 1rem;
                     text-align: right;
                     max-width: 400px;
                 }
@@ -142,7 +143,7 @@ header{
     }
 
         .arrows {
-            width: 70vw;
+            width: 65vw;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -279,6 +280,89 @@ section{
             }
 
         }
+    }
+}
+@media (max-width: 550px){
+    header img{
+        opacity: 0;
+    }
+    header{
+        top: 100px;
+        min-width: 20%;
+        max-width: 400px;
+        height: auto;
+        margin: auto;
+        display: flex;
+        gap: 7%;
+        font-size: 0.2rem;
+        flex-direction: row-reverse;
+    }
+    header nav ul{
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+
+    }
+    header nav ul li{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        width: 20px;
+        transition: 0.5s;
+
+    }
+    body{
+        font-size: 10px;
+    }
+    div.content{
+        width: 300px;
+    }
+
+    section .arrows{
+        width: 85vw;
+    }
+
+   section .arrows button img{
+        width: 16px;
+    }
+    section .arrows button{
+        width: 25px;
+        height: 25px;
+    }
+    section .list .item .content{
+        right: 1px;
+        top: 59%;
+        left: 240px;
+        width: 10vw;
+        height: auto;
+        font-size: 10px;
+    }
+    section .list .item .content h2{
+        font-size: 2.3em;
+        width: 100px;
+        text-align: end;
+        font-weight: 400;
+    }
+    section .list .item .content .description{
+        color: #d9d9d9;
+        font-size: 8px;
+        text-align: right;
+        max-width: 350px;
+        font-weight: 500;
+        width: 300px;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    section .indicators .number{
+        position: relative;
+        top: 90%;
+    }
+    section .indicators ul{
+        position: relative;
+        margin-top: 30px;
+        justify-content: center;
+        top: 60%;
+        flex-wrap: wrap;
     }
 }
   
